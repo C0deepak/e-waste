@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: mRegular;
+    src: url(./fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: mMedium;
+    src: url(./fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: mSemiBold;
+    src: url(./fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: mBold;
+    src: url(./fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: mExtraBold;
+    src: url(./fonts/Montserrat-ExtraBold.ttf);
+}
+
+body {
+    font-family: mRegular;
+    color: #222;
+    overflow-x: hidden;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+.primaryBtn {
+    background: linear-gradient(rgb(83, 192, 14), rgb(2, 134, 2));
+    color: white;
+    border: 2px solid rgb(2, 134, 2);
+    padding: .6rem 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.secondaryBtn {
+    border: 2px solid rgb(2, 134, 2);
+    padding: .6rem 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: .25s;
+    display: inline-block;
+}
+
+.secondaryBtn:hover {
+    background: linear-gradient(rgb(83, 192, 14), rgb(2, 134, 2));
+    color: white;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    z-index: 10;
+}
+
+.navBg {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: #fff;
+}
+
+.navLogo {
+    font-family: 'Bruno Ace SC', cursive;
+    font-size: 24px;
+}
+
+.navLinks a {
+    margin: .5rem;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    font-family: mMedium;
+    transition: .25s;
+}
+
+.navLinks a.active,
+.navLinks a:hover {
+    background: linear-gradient(rgb(83, 192, 14), rgb(2, 134, 2));
+    color: white;
+}
+
+.navHam {
+    font-size: 1.5rem;
+    position: relative;
+    display: none;
+    cursor: pointer;
+}
+
+.navHamIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 250px;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.heroImg {
+    width: 550px;
+}
+
+.heroHeading {
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    font-family: mExtraBold;
+    margin: 1.5rem 0;
+}
+
+.heroHeading span {
+    background: linear-gradient(rgb(83, 192, 14), rgb(2, 134, 2));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.heroBtn {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    font-family: mMedium;
+}
+
+img.hi1 {
+    position: absolute;
+    top: 10vh;
+    left: -180px;
+    width: 400px;
+    opacity: .85;
+}
+
+img.hi2 {
+    position: absolute;
+    top: 70vh;
+    right: 0px;
+    width: 300px;
+    opacity: .85;
+}
+
+.heading {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-family: mExtraBold;
+    background: linear-gradient(rgb(83, 192, 14), rgb(2, 134, 2));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin: 2rem 0;
+}
+
+.subHeading {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: mExtraBold;
+}
+
+.about {
+    padding: 0 100px;
+    margin-bottom: 4rem;
+}
+
+.aboutWrap {
+    display: flex;
+    gap: 4rem;
+}
+
+.aboutPara {
+    margin: 2rem 0;
+}
+
+.aboutLeft img {
+    width: 450px;
+}
+
+.aboutIcon {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ac i {
+    border: 2px solid rgb(2, 134, 2);
+    font-size: 1.32rem;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 4px;
+    color: rgb(2, 134, 2);
+}
+
+.ac span {
+    font-family: mBold;
+    font-size: 1.32rem;
+}
+
+.search {
+    padding: 2rem 100px;
+    background-image: url(./img/searchBg1.png);
+    background-size: cover;
+    color: #fff;
+}
+
+.searchBar {
+    margin: 2rem 0;
+}
+
+.searchBar input {
+    padding: .8rem;
+    font-family: mMedium;
+    width: calc(100% - 250px);
+    border: none;
+    outline: none;
+}
+
+.searchBar input[type="button"] {
+    width: 200px;
+    color: #fff;
+    background: linear-gradient(rgb(83, 192, 14), rgb(2, 134, 2));
+}
+
+.oi {
+    margin: 1rem 0;
+}
+
+.sp {
+    font-size: 1.1rem;
+    font-family: msemiBold;
+}
+
+.blogs {
+    padding: 2rem 100px;
+}
+
+.blogsSec {
+    padding: 2rem 0;
+}
+
+.blogCard {
+    width: 360px;
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 3px 5px 0px;
+}
+
+.blogCard:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 23px 0px;
+}
+
+.blogCard img {
+    width: 100%;
+    height: 200px;
+}
+
+.blogTitle {
+    margin: .5rem 0;
+    font-family: mBold;
+}
+
+.blogBtnWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blogBtn {
+    background: linear-gradient(rgb(83, 192, 14), rgb(2, 134, 2));
+    color: white;
+    text-align: center;
+    padding: .4rem .8rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+footer {
+    background: rgba(100, 100, 111, 0.2);
+    padding: 2rem 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footerHeading {
+    font-family: mBold;
+    margin: .5rem 0;
+}
+
+.footerLeft {
+    flex: 1;
+}
+
+.footerMiddle {
+    flex: 1;
+}
+
+.fc {
+    display: flex;
+    gap: .65rem;
+}
+
+.footerRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerRight input,
+.footerRight textarea {
+    padding: .4rem .8rem;
+    width: 80%;
+    height: 40px;
+    margin: .65rem 0;
+    font-family: mRegular;
+}
+
+.footerBtn {
+    background: linear-gradient(rgb(83, 192, 14), rgb(2, 134, 2));
+    color: white;
+    text-align: center;
+    width: 100px;
+    padding: .5rem 0;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+@media (max-width:1000px) {
+    .hero {
+        padding: 0 100px;
+    }
+
+    .heroImg {
+        width: 420px;
+    }
+
+    .heroHeading {
+        font-size: 2.5rem;
+        margin: 1rem 0;
+    }
+
+    img.hi1 {
+        top: 10vh;
+        left: -170px;
+        width: 340px;
+    }
+
+    img.hi2 {
+        top: 80vh;
+        right: 0px;
+        width: 250px;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .subHeading {
+        font-size: 1.72rem;
+    }
+
+    .aboutWrap {
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .aboutPara {
+        margin: 2rem 0;
+    }
+
+    .aboutLeft img {
+        width: 450px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .navLinks {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        z-index: 5;
+    }
+
+    .navLinks a {
+        margin: .5rem;
+        padding: .5rem 1rem;
+        border-radius: 20px;
+        font-family: mMedium;
+        transition: .25s;
+    }
+
+    .navLinks a.active,
+    .navLinks a:hover {
+        background: linear-gradient(rgb(83, 192, 14), rgb(2, 134, 2));
+        color: white;
+    }
+
+    .navHam {
+        display: initial;
+    }
+
+    .navToggle {
+        display: none;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding: 0 25px;
+    }
+
+    .heroImg {
+        width: 300px;
+    }
+
+    .heroHeading {
+        font-size: 2.25rem;
+        margin: 1rem 0;
+    }
+
+    img.hi1 {
+        position: absolute;
+        top: 10vh;
+        left: -100px;
+        width: 250px;
+        opacity: .85;
+    }
+
+    img.hi2 {
+        position: absolute;
+        top: 80vh;
+        right: 0px;
+        width: 200px;
+        opacity: .85;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .subHeading {
+        font-size: 1.32rem;
+    }
+
+    .about {
+        padding: 0 25px;
+    }
+
+    .ac span {
+        font-size: 1.2rem;
+    }
+
+    .search {
+        padding: 2rem 25px;
+    }
+
+    .searchBar input {
+        width: calc(100% - 110px);
+    }
+
+    .searchBar input[type="button"] {
+        width: 100px;
+    }
+
+    .blogs {
+        padding: 2rem 25px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 2rem 25px;
+    }
+
+}
+
+@media (max-width:500px) {
+
+    .hero {
+        padding-top: 10vh;
+    }
+
+    .heroHeading {
+        font-size: 2rem;
+    }
+
+    .heroBtn {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    img.hi1 {
+        top: 5vh;
+        left: -70px;
+        width: 150px;
+    }
+
+    img.hi2 {
+        top: 90vh;
+        right: 0px;
+        width: 100px;
+    }
+
+    .aboutLeft img {
+        width: 100%;
+    }
+}
